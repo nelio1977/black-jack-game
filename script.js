@@ -5,8 +5,9 @@ const amountEl=document.querySelector(".amount-bet")
 const cardsEl= document.querySelector("#cardsEl")
 const sumEl= document.querySelector("#sumEl")
 const msgEl= document.querySelector("#msgEl")
+const newCard= document.querySelector("#newcardEl")
 const user= document.querySelector("#user")
-const amount= document.querySelectorAll("#amount")
+const amountBtn= document.querySelectorAll(".btn")
 const div= document.querySelector("div")
 let isAlive= false;
 let hasBlackJack= false;
@@ -36,17 +37,21 @@ function randomCard() {
     }  
 }
 
-function amountBet(value){
-    theBet = Number(value)
+amountBtn.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+    console.log(e.target.value)
+    theBet = e.target.value
      amountEl.textContent = "$ " + theBet;
-      startEl.addEventListener("click", ()=> {
-        let firstCard= randomCard();
-        let secondCard= randomCard();
-        cards=[firstCard, secondCard]   
-        total= firstCard + secondCard;
-        renderGame()
+    })
+}) 
+   
+startEl.addEventListener("click", ()=> {
+    let firstCard= randomCard();
+    let secondCard= randomCard();
+    cards=[firstCard, secondCard]   
+    total= firstCard + secondCard;
+    renderGame()
   })
-}
 
 function renderGame() {  
      cardsEl.textContent = "Cards: ";
@@ -66,7 +71,7 @@ function renderGame() {
         hasBlackJack= true;
 
   } else if(total > 21) {
-        message= "Sorry, you lose. Bet and start game again."
+        message= "Sorry, you lose. Bet and start again."
         let bet= users.cash -= theBet
         const newBet= bet.toFixed(2)
         user.textContent = `User: $ ${newBet}`     
@@ -83,11 +88,12 @@ function renderGame() {
   msgEl.textContent= message;
 }
 
-function newCard(){
+newCard.addEventListener("click", () => {
     if(!hasBlackJack && isAlive) {
         let newCard= randomCard();  
         cards.push(newCard)
         total += newCard; 
         renderGame()
     }   
-}
+})
+
