@@ -1,0 +1,104 @@
+body{
+	text-align: center;
+	font-family: fantasy, sans-serif;
+	color: rgba(0, 0, 0, .7);
+}
+
+#user{
+	font-size: 2rem;
+	margin-top: 20px;
+	color: darkblue;
+}
+
+
+.parent{
+	background: lightblue;
+	max-width: 620px;
+	margin: 0 auto;
+	padding: 20px 0 40px 0;
+	margin-top: 50px;
+	border-radius: 10px;
+}
+
+h1{
+	font-size: 2.5rem;
+	letter-spacing: .4rem;
+	margin-bottom: 50px;
+	color: firebrick;
+}
+
+h2 {
+	letter-spacing: .1rem;
+	font-size: 1.5rem;
+}
+
+h3 {
+	letter-spacing: .1rem;
+	margin-bottom: 2px;
+	font-size: 2rem;
+}
+
+button {
+	padding: 5px 30px;
+	margin-top: 10px;
+	border-radius: 5px;
+	border: transparent;
+	font-size: 1.3rem;
+	font-family: fantasy, sans-serif;
+	letter-spacing: .2rem;
+
+}
+
+.btn {
+	font-size: 1.3rem;
+	color: darkblue;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+
+.active, .btn:hover {
+	 background-color: #666;
+ 	 color: white;
+}
+
+span.amount-bet {
+	color: darkblue;
+}
+
+button:hover {
+	transform: scale(1.1);
+}
+
+button:active {
+	transform: scale(.98);
+}
+
+button#startEl {
+	background: lightcoral;
+}
+
+button#newcardEl{
+	background: lightcoral;
+}
+
+#msgEl {
+	font-style: italic;	
+	color: blue;
+	font-size: 1.3rem;
+}
+
+
+
+p#msgEl {
+	margin-bottom: 0;
+	letter-spacing: .1rem;
+    animation: blink-animation 2s steps(10, start) infinite;
+      }
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+    }
+
+
