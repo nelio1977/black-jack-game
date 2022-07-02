@@ -23,8 +23,8 @@ body{
 h1{
 	font-size: 2.5rem;
 	letter-spacing: .4rem;
-	margin-bottom: 50px;
 	color: firebrick;
+	margin-bottom: 0;
 }
 
 h2 {
@@ -54,6 +54,7 @@ button {
 	color: darkblue;
 	margin-left: 10px;
 	margin-bottom: 20px;
+	margin-top: 0;
 }
 
 .active, .btn:hover {
@@ -79,16 +80,15 @@ button#startEl {
 
 button#newcardEl{
 	background: lightcoral;
+	margin-top: 5px;
 }
 
-#msgEl {
+.msg {
 	font-style: italic;	
 	color: blue;
 	font-size: 1.3rem;
-}
-
-p#msgEl {
-	margin-bottom: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	letter-spacing: .1rem;
     animation: blink-animation 2s steps(10, start) infinite;
       }
@@ -97,6 +97,10 @@ p#msgEl {
           visibility: hidden;
         }
       }
-    }
+}
+
+
+	
+
 
 
